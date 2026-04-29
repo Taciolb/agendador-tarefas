@@ -1,10 +1,10 @@
-from gradle:7.5-jdk17 as build
+FROM gradle:7.5-jdk17 as BUILD
 WORKDIR /app
 COPY . .
-RUN ./gradlew clean build -x test --no-daemon
+RUN ./gradlew clean build --no-daemon
 
 
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 

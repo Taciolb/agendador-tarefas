@@ -9,6 +9,6 @@ public class UnauthorizedException extends AuthenticationException {
     }
 
     public UnauthorizedException(String mensagem, Throwable throwable){
-        super(mensagem);
+        super(mensagem) ;
     }
 }
